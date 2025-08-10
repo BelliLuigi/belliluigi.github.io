@@ -1,22 +1,53 @@
-/* Vim-inspired theme */
+/* Gruvbox-inspired theme */
 body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #1e1e1e; /* A dark background */
-    color: #d4d4d4; /* Light grey text */
+    background: #282828; /* Gruvbox Background */
+    color: #ebdbb2; /* Gruvbox Foreground */
+}
+
+a {
+    color: #d79921; /* Gruvbox Yellow */
+}
+
+a:hover {
+    color: #98971a; /* Gruvbox Green */
 }
 
 header {
-    padding: 1rem 0;
-    text-align: center;
-    border-bottom: 1px solid #555; /* Separator */
+    padding: 1rem;
+    border-bottom: 1px solid #7c6f64; /* Gruvbox Gray */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-links a {
+    margin-left: 1.5em;
+}
+
+.contact-links svg {
+    width: 24px;
+    height: 24px;
+    fill: #ebdbb2; /* Gruvbox Foreground */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.contact-links a:hover svg {
+    fill: #98971a; /* Gruvbox Green */
 }
 
 header h1::before {
     content: "~ ";
-    color: #569cd6; /* Blue for the tilde */
+    color: #d79921; /* Gruvbox Yellow */
 }
 
 main {
@@ -28,25 +59,26 @@ main {
 section {
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #333; /* Subtle borders for sections */
+    border: 1px solid #7c6f64; /* Gruvbox Gray */
 }
 
 h1, h2 {
-    color: #569cd6; /* Blue for headings */
+    color: #d65d0e; /* Gruvbox Orange */
 }
 
 .button {
     display: inline-block;
-    background: #569cd6; /* Blue background */
-    color: #1e1e1e; /* Dark text */
+    background: #d79921; /* Gruvbox Yellow */
+    color: #282828; /* Gruvbox Background */
     padding: 0.5rem 1rem;
     text-decoration: none;
-    border: 1px solid #569cd6;
+    border: 1px solid #d79921; /* Gruvbox Yellow */
 }
 
 .button:hover {
-    background: #4080b6;
-    border-color: #4080b6;
+    background: #98971a; /* Gruvbox Green */
+    border-color: #98971a; /* Gruvbox Green */
+    color: #ebdbb2; /* Gruvbox Foreground */
 }
 
 footer {
@@ -54,8 +86,8 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #333;
-    color: #fff;
+    background: #3c3836;
+    color: #ebdbb2; /* Gruvbox Foreground */
     padding: 0.3rem 1rem;
     text-align: left;
     font-size: 0.9rem;
@@ -66,8 +98,27 @@ footer .filename {
 }
 
 footer .mode {
-    background: #569cd6;
-    color: #1e1e1e;
+    background: #d79921; /* Gruvbox Yellow */
+    color: #282828; /* Gruvbox Background */
     padding: 0.1rem 0.5rem;
     font-weight: bold;
+}
+
+/* Blinking cursor on section hover */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+h2::after {
+  content: '█';
+  opacity: 0;
+  animation: blink 1.2s step-end infinite;
+  margin-left: 8px;
+  color: #fe8019; /* Gruvbox Bright Orange */
+}
+
+section:hover h2::after {
+  opacity: 1;
 }
