@@ -1,17 +1,22 @@
+/* Vim-inspired theme */
 body {
-    font-family: sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    background: #1e1e1e; /* A dark background */
+    color: #d4d4d4; /* Light grey text */
 }
 
 header {
-    background: #333;
-    color: #fff;
     padding: 1rem 0;
     text-align: center;
+    border-bottom: 1px solid #555; /* Separator */
+}
+
+header h1::before {
+    content: "~ ";
+    color: #569cd6; /* Blue for the tilde */
 }
 
 main {
@@ -21,21 +26,48 @@ main {
 }
 
 section {
-    background: #fff;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border-radius: 5px;
+    border: 1px solid #333; /* Subtle borders for sections */
+}
+
+h1, h2 {
+    color: #569cd6; /* Blue for headings */
 }
 
 .button {
     display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
+    background: #569cd6; /* Blue background */
+    color: #1e1e1e; /* Dark text */
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 5px;
+    border: 1px solid #569cd6;
 }
 
 .button:hover {
-    background: #555;
+    background: #4080b6;
+    border-color: #4080b6;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+footer .filename {
+    font-weight: bold;
+}
+
+footer .mode {
+    background: #569cd6;
+    color: #1e1e1e;
+    padding: 0.1rem 0.5rem;
+    font-weight: bold;
 }
