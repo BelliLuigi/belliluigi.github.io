@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gigi's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -80,6 +83,7 @@
     </main>
     <footer>
         <span class="mode">-- NORMAL --</span>
+        <span class="command-sequence"></span>
         <span class="filename">"index.html"</span>
         <span class="position">1,1 Top</span>
     </footer>
@@ -91,6 +95,50 @@
         });
         cvButton.addEventListener('mouseout', () => {
             cvButton.textContent = originalText;
+        });
+
+        const modeSpan = document.querySelector('.mode');
+        const commandSpan = document.querySelector('.command-sequence');
+        let currentMode = 'NORMAL';
+        let commandSequence = '';
+
+        document.addEventListener('keydown', (event) => {
+            if (currentMode === 'NORMAL') {
+                switch (event.key) {
+                    case 'i':
+                        currentMode = 'INSERT';
+                        break;
+                    case 'v':
+                        currentMode = 'VISUAL';
+                        break;
+                    case ':':
+                        currentMode = 'COMMAND';
+                        commandSequence = ':';
+                        break;
+                }
+            } else if (currentMode === 'COMMAND') {
+                if (event.key === 'Enter') {
+                    commandSequence = '';
+                    currentMode = 'NORMAL';
+                } else if (event.key === 'Escape') {
+                    currentMode = 'NORMAL';
+                    commandSequence = '';
+                } else if (event.key === 'Backspace') {
+                    commandSequence = commandSequence.slice(0, -1);
+                } else if (event.key.length === 1) {
+                    commandSequence += event.key;
+                }
+            } else {
+                if (event.key === 'Escape') {
+                    currentMode = 'NORMAL';
+                }
+            }
+            modeSpan.textContent = `-- ${currentMode} --`;
+            if (currentMode === 'COMMAND') {
+                commandSpan.textContent = commandSequence;
+            } else {
+                commandSpan.textContent = '';
+            }
         });
     </script>
 </body>

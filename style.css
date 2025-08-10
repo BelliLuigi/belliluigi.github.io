@@ -1,6 +1,7 @@
 /* Gruvbox-inspired theme */
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
+    font-variant-ligatures: common-ligatures;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -31,6 +32,7 @@ header {
 
 .contact-links a {
     margin-left: 1.5em;
+    text-decoration: none;
 }
 
 .contact-links svg {
@@ -102,6 +104,10 @@ footer .mode {
     color: #282828; /* Gruvbox Background */
     padding: 0.1rem 0.5rem;
     font-weight: bold;
+}
+
+.command-sequence {
+    margin-left: 1em;
 }
 
 /* Blinking cursor on section hover */
