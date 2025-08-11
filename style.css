@@ -1,25 +1,104 @@
-/* Gruvbox-inspired theme */
+:root {
+    --dark-bg: #282828;
+    --dark-fg: #ebdbb2;
+    --dark-yellow: #d79921;
+    --dark-green: #98971a;
+    --dark-gray: #7c6f64;
+    --dark-orange: #d65d0e;
+    --dark-bright-orange: #fe8019;
+    --dark-header-bg: #3c3836;
+    --dark-blue: #458588;
+    --dark-purple: #b16286;
+
+    --light-bg: #fbf1c7;
+    --light-fg: #3c3836;
+    --light-yellow: #b57614;
+    --light-green: #79740e;
+    --light-gray: #a89984;
+    --light-orange: #af3a03;
+    --light-bright-orange: #af3a03;
+    --light-header-bg: #ebdbb2;
+    --light-blue: #076678;
+    --light-purple: #8f3f71;
+
+    --contrast-bg: #000000;
+    --contrast-fg: #ffffff;
+    --contrast-yellow: #ffff00;
+    --contrast-green: #00ff00;
+    --contrast-gray: #dddddd;
+    --contrast-orange: #ffff00;
+    --contrast-bright-orange: #ffff00;
+    --contrast-header-bg: #000000;
+    --contrast-blue: #0000ff;
+    --contrast-purple: #ff00ff;
+}
+
 body {
     font-family: 'Fira Code', monospace;
     font-variant-ligatures: common-ligatures;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #282828; /* Gruvbox Background */
-    color: #ebdbb2; /* Gruvbox Foreground */
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    --bg-color: var(--dark-bg);
+    --fg-color: var(--dark-fg);
+    --yellow: var(--dark-yellow);
+    --green: var(--dark-green);
+    --gray: var(--dark-gray);
+    --orange: var(--dark-orange);
+    --bright-orange: var(--dark-bright-orange);
+    --header-bg: var(--dark-header-bg);
+    --blue: var(--dark-blue);
+    --purple: var(--dark-purple);
+}
+
+body.light-mode {
+    --bg-color: var(--light-bg);
+    --fg-color: var(--light-fg);
+    --yellow: var(--light-yellow);
+    --green: var(--light-green);
+    --gray: var(--light-gray);
+    --orange: var(--light-orange);
+    --bright-orange: var(--light-bright-orange);
+    --header-bg: var(--light-header-bg);
+    --blue: var(--light-blue);
+    --purple: var(--light-purple);
+}
+
+body.high-contrast-mode {
+    --bg-color: var(--contrast-bg);
+    --fg-color: var(--contrast-fg);
+    --yellow: var(--contrast-yellow);
+    --green: var(--contrast-green);
+    --gray: var(--contrast-gray);
+    --orange: var(--contrast-orange);
+    --bright-orange: var(--contrast-bright-orange);
+    --header-bg: var(--contrast-header-bg);
+    --blue: var(--contrast-blue);
+    --purple: var(--contrast-purple);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--fg-color);
 }
 
 a {
-    color: #d79921; /* Gruvbox Yellow */
+    color: var(--yellow);
+    transition: color 0.3s;
 }
 
 a:hover {
-    color: #98971a; /* Gruvbox Green */
+    color: var(--green);
 }
 
 header {
     padding: 1rem;
-    border-bottom: 1px solid #7c6f64; /* Gruvbox Gray */
+    border-bottom: 1px solid var(--gray);
+    transition: border-color 0.3s;
 }
 
 .header-container {
@@ -38,18 +117,18 @@ header {
 .contact-links svg {
     width: 24px;
     height: 24px;
-    fill: #ebdbb2; /* Gruvbox Foreground */
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
+    fill: var(--fg-color);
+    transition: fill 0.3s;
 }
 
 .contact-links a:hover svg {
-    fill: #98971a; /* Gruvbox Green */
+    fill: var(--green);
 }
 
 header h1::before {
     content: "~ ";
-    color: #d79921; /* Gruvbox Yellow */
+    color: var(--yellow);
+    transition: color 0.3s;
 }
 
 main {
@@ -61,38 +140,46 @@ main {
 section {
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #7c6f64; /* Gruvbox Gray */
+    border: 1px solid var(--gray);
+    transition: border-color 0.3s;
 }
 
 h1, h2 {
-    color: #d65d0e; /* Gruvbox Orange */
+    color: var(--orange);
+    transition: color 0.3s;
 }
 
 .button {
     display: inline-block;
-    background: #d79921; /* Gruvbox Yellow */
-    color: #282828; /* Gruvbox Background */
     padding: 0.5rem 1rem;
     text-decoration: none;
-    border: 1px solid #d79921; /* Gruvbox Yellow */
+    border: 1px solid var(--yellow);
+    background: var(--yellow);
+    color: var(--bg-color);
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .button:hover {
-    background: #98971a; /* Gruvbox Green */
-    border-color: #98971a; /* Gruvbox Green */
-    color: #ebdbb2; /* Gruvbox Foreground */
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--fg-color);
 }
 
 footer {
+    box-sizing: border-box;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #3c3836;
-    color: #ebdbb2; /* Gruvbox Foreground */
     padding: 0.3rem 1rem;
     text-align: left;
     font-size: 0.9rem;
+    background: var(--header-bg);
+    color: var(--fg-color);
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer .filename {
@@ -100,25 +187,26 @@ footer .filename {
 }
 
 footer .mode {
-    color: #282828; /* Gruvbox Background */
     padding: 0.1rem 0.5rem;
     font-weight: bold;
+    color: var(--bg-color);
+    transition: background 0.3s, color 0.3s;
 }
 
 .mode-normal {
-    background: #d79921; /* Gruvbox Yellow */
+    background: var(--yellow);
 }
 
 .mode-insert {
-    background: #458588; /* Gruvbox Blue */
+    background: var(--blue);
 }
 
 .mode-visual {
-    background: #b16286; /* Gruvbox Purple */
+    background: var(--purple);
 }
 
 .mode-command {
-    background: #d65d0e; /* Gruvbox Orange */
+    background: var(--orange);
 }
 
 .command-sequence {
@@ -132,28 +220,37 @@ footer .mode {
   }
 }
 
-h1::after {
+h1::after, h2::after {
   content: '█';
   opacity: 0;
   animation: blink 1.2s step-end infinite;
   margin-left: 8px;
-  color: #fe8019; /* Gruvbox Bright Orange */
+  color: var(--bright-orange);
+  transition: color 0.3s;
 }
 
 header:hover h1::after {
     opacity: 1;
 }
 
-h2::after {
-  content: '█';
-  opacity: 0;
-  animation: blink 1.2s step-end infinite;
-  margin-left: 8px;
-  color: #fe8019; /* Gruvbox Bright Orange */
-}
-
 section:hover h2::after {
   opacity: 1;
+}
+
+.footer-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-left: 0.5em;
+}
+
+.footer-buttons button svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--fg-color);
+    fill: none;
 }
 
 @media (max-width: 600px) {
@@ -169,5 +266,11 @@ section:hover h2::after {
     }
     .contact-links a {
         margin: 0 0.5em;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .footer-buttons {
+        margin-top: 0.5rem;
     }
 }

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luigi cv</title>
+    <title>Luigi's CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-mode">
     <header>
         <div class="header-container">
             <h1>Luigi Belli</h1>
@@ -82,10 +82,16 @@
         </section>
     </main>
     <footer>
-        <span class="mode mode-normal">-- NORMAL --</span>
-        <span class="command-sequence"></span>
-        <span class="filename">"index.html"</span>
-        <span class="position">1,1 Top</span>
+        <div>
+            <span class="mode mode-normal">-- NORMAL --</span>
+            <span class="command-sequence"></span>
+            <span class="filename">"index.html"</span>
+            <span class="position">1,1 Top</span>
+        </div>
+        <div class="footer-buttons">
+            <button id="theme-toggle"></button>
+            <button id="contrast-toggle"></button>
+        </div>
     </footer>
     <script>
         const cvButton = document.querySelector('#cv .button');
@@ -149,6 +155,41 @@
                 commandSpan.textContent = '';
             }
         });
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const contrastToggleButton = document.getElementById('contrast-toggle');
+        const body = document.body;
+
+        const sunIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+        const moonIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+        const accessibilityIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>';
+
+        themeToggleButton.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+            const isLightMode = body.classList.contains('light-mode');
+            localStorage.setItem('lightMode', isLightMode);
+            themeToggleButton.innerHTML = isLightMode ? moonIcon : sunIcon;
+        });
+
+        contrastToggleButton.addEventListener('click', () => {
+            body.classList.toggle('high-contrast-mode');
+            const isContrastMode = body.classList.contains('high-contrast-mode');
+            localStorage.setItem('contrastMode', isContrastMode);
+        });
+
+        const isLightMode = localStorage.getItem('lightMode') === 'true';
+        if (isLightMode) {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+        }
+        themeToggleButton.innerHTML = isLightMode ? moonIcon : sunIcon;
+
+        if (localStorage.getItem('contrastMode') === 'true') {
+            body.classList.add('high-contrast-mode');
+        }
+        contrastToggleButton.innerHTML = accessibilityIcon;
+
     </script>
 </body>
 </html>
