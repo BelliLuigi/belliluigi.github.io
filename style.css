@@ -100,21 +100,48 @@ footer .filename {
 }
 
 footer .mode {
-    background: #d79921; /* Gruvbox Yellow */
     color: #282828; /* Gruvbox Background */
     padding: 0.1rem 0.5rem;
     font-weight: bold;
+}
+
+.mode-normal {
+    background: #d79921; /* Gruvbox Yellow */
+}
+
+.mode-insert {
+    background: #458588; /* Gruvbox Blue */
+}
+
+.mode-visual {
+    background: #b16286; /* Gruvbox Purple */
+}
+
+.mode-command {
+    background: #d65d0e; /* Gruvbox Orange */
 }
 
 .command-sequence {
     margin-left: 1em;
 }
 
-/* Blinking cursor on section hover */
+/* Blinking cursor */
 @keyframes blink {
   50% {
     opacity: 0;
   }
+}
+
+h1::after {
+  content: '█';
+  opacity: 0;
+  animation: blink 1.2s step-end infinite;
+  margin-left: 8px;
+  color: #fe8019; /* Gruvbox Bright Orange */
+}
+
+header:hover h1::after {
+    opacity: 1;
 }
 
 h2::after {
