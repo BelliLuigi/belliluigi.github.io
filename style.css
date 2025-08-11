@@ -268,9 +268,9 @@ section:hover h2::after {
         margin: 0 0.5em;
     }
     footer {
-        flex-direction: column;
+        justify-content: center;
     }
-    .footer-buttons {
-        margin-top: 0.5rem;
+    footer > div:first-child {
+        display: none;
     }
 }
