@@ -6,12 +6,12 @@
 <a href="https://linkedin.com/in/belliluigi">linkedin.com/in/belliluigi</a>
 </div>
 
-## Goal
+<!--## Goal
 
 Career in data science and astrophysics and cosmology possibly in:
 * Fundamental Research
 * Applied space science
-* Industrial Research and Development
+* Industrial Research and Development -->
 
 ## Skills
 
