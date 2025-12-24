@@ -6,19 +6,28 @@
 <a href="https://linkedin.com/in/belliluigi">linkedin.com/in/belliluigi</a>
 </div>
 
-## Skills
+## About me
 
-- **Python**
-- **R**
-- **MySQL**
-- **Bash**
-- **ML/DL: Pytorch, Optuna, ScikitLearn, Keras**
-- **Distributes systems: Dask, NFS, Kafka, Apache Spark**
-- **Linux**
+Physics of Data Master's student combining astrophysics with data science, machine learning and HPC.
 
-## Who am I + Projects
+Seeking an internship to apply and enhance my technical skills for scientific discovery and research.
 
-I am leveraging my Master's program to fuse my extensive background in physics and astronomy with state-of-the-art technology. My objective is to become a professional who synthesizes these domains, acting as a catalyst for innovative projects and experimental initiatives.
+## Education
+
+**University of Padua**
+
+*MSc student of Physics of Data*
+
+2024-
+
+**University of Padua**
+
+*Bachelor in Astronomy*
+
+2019-2024
+
+*   Thesis: Formation of binary systems Black Hole-Star: the case of Gaia BH1 and Gaia BH2.
+    - Analyzed population synthesis simulations (SEVN code) for Gaia BH1/BH2, providing strong evidence that a dynamical formation scenario, rather than isolated evolution, is probable origin for these systems.
 
 ### Projects
 
@@ -30,25 +39,16 @@ I am leveraging my Master's program to fuse my extensive background in physics a
 *   [Cord19 Analysis](https://github.com/BelliLuigi/Cord18-Dask-Distributed-Analysis) **[Dask, Cluster setup, NFS, MapReduce, NLP: word2vec + Cosine Similarity]**
 *   [Carrom Tournament Bot](https://github.com/BelliLuigi/Carrom-Tournament-Bot) **[Telegram Bot API, Docker, MySQL]**
 
-## Education
 
-**University of Padua**
+## Skills
 
-*Student of Physics of Data*
-
-2024-
-
-**University of Padua**
-
-*Bachelor in Astronomy*
-
-2019-2024
-
-*   Thesis: Formazione di sistemi binari buco nero-stella: il caso di Gaia BH1 e Gaia BH2. Supervisor: Prof. Giuliano Iorio. Co-supervisor: Prof.ssa Sara Rastello.
-
-**High Energy Astrophysics International Data Camp**
-
-2023
+- **Python**
+- **R**
+- **MySQL**
+- **Bash**
+- **ML/DL: Pytorch, Optuna, ScikitLearn, Keras**
+- **Distributes systems: Dask, NFS, Kafka, Apache Spark**
+- **Linux**
 
 ## Interests
 
