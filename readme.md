@@ -36,10 +36,10 @@ Seeking an internship to apply and enhance my technical skills for scientific di
       - Optimized hyperparameters with Optuna, achieving RMSE of ≃ 0.06.
       - Validated model scalability for large-scale astronomical surveys.
 *   [Data analysis of hierarchical mergers of black holes simulations](https://github.com/BelliLuigi/Hierarchical-mergers-of-black-holes)
-        - Analyzed hierarchical binary BH merger simulations across diverse star clusters (Python, Pandas).
-        - Investigated cluster conditions in BH evolution by comparing mass, spin, and merger generation distributions.
-        - Applied Random Forest to identify key drivers of higher-generation BH formation.
-        - Quantified clusters’ influence on merger remnant retention and high mass BH populations detected via GWs.
+  - Analyzed hierarchical binary BH merger simulations across diverse star clusters (Python, Pandas).
+    - Investigated cluster conditions in BH evolution by comparing mass, spin, and merger generation distributions.
+    - Applied Random Forest to identify key drivers of higher-generation BH formation.
+    - Quantified clusters’ influence on merger remnant retention and high mass BH populations detected via GWs.
 *   [Distributed analysis of Cord-19 dataset](https://github.com/BelliLuigi/Cord18-Dask-Distributed-Analysis)
       - Executed large-scale text analysis ( ≃ 200k papers) using Dask for distributed computation.
       - Developed parallel word-count algorithm and generated NLP embeddings to compute cosine similarity.
@@ -49,7 +49,7 @@ Seeking an internship to apply and enhance my technical skills for scientific di
     - Developed automated node order search methods using brute force and simulated annealing.
     - Benchmarked and validated algorithm performance against the standard bnstruct R library.
 *   [Carrom Tournament Bot](https://github.com/BelliLuigi/Carrom-Tournament-Bot)
-      Developed and deployed an MVP Telegram bot (Python, Docker, MySQL) for automated tournament management and data analysis, enabling reproducible deployment and robust statistics computation.
+    - Developed and deployed an MVP Telegram bot (Python, Docker, MySQL) for automated tournament management and data analysis, enabling reproducible deployment and robust statistics computation.
 
 ## Skills
 
