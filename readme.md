@@ -14,15 +14,12 @@ Seeking an internship to apply and enhance my technical skills for scientific di
 
 ## Education
 
-**University of Padua**
-
-*MSc student of Physics of Data*
+**MSc student of Physics of Data** @ *University of Padua* 
 
 2024-
 
-**University of Padua**
 
-*Bachelor in Astronomy*
+**Bachelor in Astronomy** @ *University of Padua*
 
 2019-2024
 
