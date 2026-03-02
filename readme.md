@@ -30,7 +30,10 @@ Seeking an internship to apply and enhance my technical skills for scientific di
     - Analyzed population synthesis simulations (SEVN code) for Gaia BH1/BH2, providing strong evidence that a dynamical formation scenario, rather than isolated evolution, is probable origin for these systems.
 
 ### Projects
-
+*    [Autoencoder for Gravitational Waves Anomaly Detection](https://github.com/BelliLuigi/Autoencoder-for-GW-Detection)
+      - Built and benchmarked different AE architectures to perform anomaly detection on GW timeseries.
+      - Analysis focused on Long Short-Term Memory-based Networks.
+      - Used Pytorch and Optuna to tune hyperparameters, succesfully replicated reference paper’s results.
 *   [Galaxy Classification using CNN](https://github.com/BelliLuigi/GalaxyClassifier)
       - Built and benchmarked CNNs for morphological classification on the GalaxyZoo 2 dataset.
       - Optimized hyperparameters with Optuna, achieving RMSE of ≃ 0.06.
