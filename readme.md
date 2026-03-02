@@ -24,7 +24,7 @@ Seeking an internship to apply and enhance my technical skills for scientific di
 2019-2024
 
 *   Thesis: Formation of binary systems Black Hole-Star: the case of Gaia BH1 and Gaia BH2.
-    - Analyzed population synthesis simulations (SEVN code) for Gaia BH1/BH2, providing strong evidence that a dynamical formation scenario, rather than isolated evolution, is probable origin for these systems.
+    - Analyzed population synthesis simulations for Gaia BH1/BH2, providing evidence that a dynamical formation scenario, rather than isolated evolution, is probable origin for these systems.
 
 ### Projects
 *    [Autoencoder for Gravitational Waves Anomaly Detection](https://github.com/BelliLuigi/Autoencoder-for-GW-Detection)
